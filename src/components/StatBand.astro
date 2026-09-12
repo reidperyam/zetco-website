@@ -1,0 +1,28 @@
+---
+import Stat from './Stat.astro';
+
+// Numbers are placeholders — confirm with client.
+const stats = [
+  { value: '60+', label: "Years' experience", accent: true },
+  { value: '140', label: 'Projects facilitated' },
+  { value: '38', label: 'Public entities served' },
+  { value: '1996', label: 'Founded in Cali' },
+];
+---
+
+<section class="band container" id="firm" aria-label="Zetco at a glance">
+  {stats.map((s) => <Stat {...s} />)}
+</section>
+
+<style>
+  .band {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    border-bottom: 1px solid var(--rule);
+  }
+  @media (max-width: 1024px) {
+    .band {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+</style>

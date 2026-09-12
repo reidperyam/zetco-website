@@ -1,0 +1,109 @@
+---
+import Nav from './Nav.astro';
+---
+
+<header class="hero">
+  <Nav />
+  <svg class="mark" viewBox="0 0 400 300" aria-hidden="true">
+    <polygon points="0,0 160,0 80,120" fill="#fff" />
+    <polygon points="200,0 290,0 90,300 0,300" fill="#fff" />
+    <polygon points="310,0 400,0 200,300 110,300" fill="#fff" />
+    <polygon points="320,180 400,300 240,300" fill="#fff" />
+  </svg>
+  <div class="copy">
+    <h1>We build the bridge before the bridge.</h1>
+    <p>
+      Infrastructure stalls between the public entity that needs it and the private firm that can build it. Zetco is
+      the team in the middle — planning, permitting, managing and delivering.
+    </p>
+    <div class="actions">
+      <a class="btn-black" href="mailto:contacto@zetco.com.co">Contact us</a>
+      <a class="approach" href="#services">Our approach</a>
+    </div>
+  </div>
+</header>
+
+<style>
+  .hero {
+    background: var(--red);
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+  }
+  .mark {
+    position: absolute;
+    right: -60px;
+    top: 40px;
+    width: 640px;
+    height: auto;
+    opacity: 0.18;
+    pointer-events: none;
+  }
+  .copy {
+    padding: 110px var(--gutter) 120px;
+    position: relative;
+    z-index: 1;
+  }
+  h1 {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 92px;
+    line-height: 0.98;
+    letter-spacing: -0.03em;
+    margin: 0;
+    max-width: 11ch;
+    text-transform: uppercase;
+  }
+  p {
+    font-size: 20px;
+    line-height: 1.6;
+    max-width: 52ch;
+    margin: 40px 0 0;
+    color: #fff;
+  }
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 40px;
+  }
+  .approach {
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 14px 6px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+  }
+  .approach:hover {
+    color: #fff;
+    border-bottom-color: #fff;
+  }
+
+  @media (max-width: 1024px) {
+    h1 {
+      font-size: clamp(56px, 8vw, 92px);
+    }
+    .copy {
+      padding-block: 80px 90px;
+    }
+    .mark {
+      width: 480px;
+    }
+  }
+  @media (max-width: 640px) {
+    h1 {
+      font-size: clamp(44px, 12vw, 56px);
+    }
+    p {
+      font-size: 18px;
+      margin-top: 28px;
+    }
+    .copy {
+      padding-block: 56px 64px;
+    }
+    .mark {
+      width: 360px;
+      right: -120px;
+    }
+  }
+</style>

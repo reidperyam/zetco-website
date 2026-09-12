@@ -1,0 +1,62 @@
+<section class="close" id="careers" aria-labelledby="close-heading">
+  <h3 id="close-heading">Have a project that needs to move?</h3>
+  <div class="side">
+    <a class="btn-black" href="mailto:contacto@zetco.com.co">Contact us</a>
+    <span><a href="mailto:contacto@zetco.com.co">contacto@zetco.com.co</a> · Cali, Colombia</span>
+  </div>
+</section>
+
+<style>
+  .close {
+    background: var(--red);
+    color: #fff;
+    margin-top: var(--section);
+    padding: 72px var(--gutter);
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+    gap: 72px;
+    align-items: end;
+  }
+  h3 {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 64px;
+    letter-spacing: -0.04em;
+    line-height: 0.98;
+    margin: 0;
+  }
+  .side {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-size: 15px;
+  }
+  .side .btn-black {
+    text-align: center;
+  }
+  .side span a {
+    color: #fff;
+    text-decoration: none;
+  }
+  .side span a:hover {
+    color: #fff;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  @media (max-width: 1024px) {
+    h3 {
+      font-size: clamp(40px, 6vw, 64px);
+    }
+    .close {
+      gap: 40px;
+    }
+  }
+  @media (max-width: 640px) {
+    .close {
+      grid-template-columns: 1fr;
+      gap: 32px;
+      padding-block: 56px;
+    }
+  }
+</style>

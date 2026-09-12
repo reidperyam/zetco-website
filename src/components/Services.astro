@@ -1,0 +1,35 @@
+---
+import ServiceRow from './ServiceRow.astro';
+
+const services = [
+  {
+    index: '01',
+    title: 'Project & program management',
+    body: 'Schedule, cost, contracts and quality under one accountable team — from scope to close-out. One plan, one truth, reported the way the owner needs to read it.',
+  },
+  {
+    index: '02',
+    title: 'Feasibility & planning',
+    body: 'Technical, financial and institutional feasibility, structured so a public entity and a private partner can each commit to the same document.',
+  },
+  {
+    index: '03',
+    title: 'Public–private facilitation',
+    body: 'Thirty years of trust on both sides of the table, put to work aligning institutions, contractors and lenders around one schedule.',
+  },
+];
+---
+
+<section class="services container" id="services">
+  <span class="kicker">Services</span>
+  {services.map((s) => <ServiceRow {...s} />)}
+</section>
+
+<style>
+  .services {
+    padding-top: var(--section);
+  }
+  .kicker {
+    margin-bottom: 8px;
+  }
+</style>

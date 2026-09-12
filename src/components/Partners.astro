@@ -1,0 +1,43 @@
+---
+// Replace tiles with real client logos (grayscale) when supplied.
+const slots = 5;
+---
+
+<section class="partners container" aria-label="Clients and partners">
+  <span class="kicker">Clients &amp; partners</span>
+  <div class="logos">
+    {Array.from({ length: slots }).map(() => <div class="tile" aria-hidden="true" />)}
+  </div>
+</section>
+
+<style>
+  .partners {
+    padding-top: var(--section);
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+    gap: 72px;
+    align-items: center;
+  }
+  .logos {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 20px;
+  }
+  .tile {
+    height: 44px;
+    background: var(--tile);
+  }
+
+  @media (max-width: 1024px) {
+    .partners {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+  }
+  @media (max-width: 640px) {
+    .logos {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+  }
+</style>

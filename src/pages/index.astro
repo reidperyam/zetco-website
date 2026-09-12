@@ -1,0 +1,25 @@
+---
+import Base from '../layouts/Base.astro';
+import Hero from '../components/Hero.astro';
+import StatBand from '../components/StatBand.astro';
+import Services from '../components/Services.astro';
+import ProjectPanel from '../components/ProjectPanel.astro';
+import Partners from '../components/Partners.astro';
+import Close from '../components/Close.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Base
+  title="Zetco — We build the bridge before the bridge"
+  description="Zetco is a Cali, Colombia project-management firm facilitating infrastructure between public entities and private builders — planning, permitting, managing and delivering since 1996."
+>
+  <Hero />
+  <main>
+    <StatBand />
+    <Services />
+    <ProjectPanel />
+    <Partners />
+    <Close />
+  </main>
+  <Footer />
+</Base>

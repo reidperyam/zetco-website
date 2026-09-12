@@ -1,0 +1,74 @@
+---
+// Pill toggle in the red nav. Label/knob follow <html data-theme>, which the
+// inline script in Base.astro sets before first paint.
+---
+
+<button type="button" class="toggle" data-theme-toggle title="Toggle dark mode" aria-label="Toggle dark mode">
+  <span class="track" aria-hidden="true"><span class="knob"></span></span>
+  <span class="label label-light">Light</span>
+  <span class="label label-dark">Dark</span>
+</button>
+
+<style>
+  .toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    color: #fff;
+    font: inherit;
+    font-size: 13px;
+    padding: 6px 10px;
+    border-radius: 999px;
+    cursor: pointer;
+  }
+  .track {
+    width: 26px;
+    height: 14px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.35);
+    position: relative;
+    display: inline-block;
+  }
+  .knob {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #fff;
+    transition: left 0.2s;
+  }
+  .label-dark {
+    display: none;
+  }
+  :global(:root[data-theme='dark']) .knob {
+    left: 14px;
+  }
+  :global(:root[data-theme='dark']) .label-light {
+    display: none;
+  }
+  :global(:root[data-theme='dark']) .label-dark {
+    display: inline;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .knob {
+      transition: none;
+    }
+  }
+</style>
+
+<script>
+  const root = document.documentElement;
+  document.querySelectorAll<HTMLButtonElement>('[data-theme-toggle]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      try {
+        localStorage.setItem('zetco-theme', next);
+      } catch {}
+    });
+  });
+</script>

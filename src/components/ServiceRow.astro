@@ -1,0 +1,74 @@
+---
+interface Props {
+  index: string;
+  title: string;
+  body: string;
+}
+const { index, title, body } = Astro.props;
+---
+
+<div class="row">
+  <span class="num" aria-hidden="true">{index}</span>
+  <div class="inner">
+    <h2>{title}</h2>
+    <p>{body}</p>
+  </div>
+</div>
+
+<style>
+  .row {
+    display: grid;
+    grid-template-columns: 120px minmax(0, 1fr);
+    gap: 32px;
+    padding: 36px 0;
+    border-bottom: 1px solid var(--rule);
+    align-items: start;
+  }
+  .num {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 40px;
+    letter-spacing: -0.03em;
+    color: var(--red);
+    line-height: 1;
+  }
+  .inner {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 48px;
+  }
+  h2 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 34px;
+    letter-spacing: -0.02em;
+    margin: 0;
+    line-height: 1.1;
+  }
+  p {
+    font-size: 16px;
+    line-height: 1.7;
+    margin: 0;
+    color: var(--sub);
+  }
+
+  @media (max-width: 1024px) {
+    .inner {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+  }
+  @media (max-width: 640px) {
+    .row {
+      grid-template-columns: 1fr;
+      gap: 12px;
+      padding: 28px 0;
+    }
+    .num {
+      font-size: 32px;
+    }
+    h2 {
+      font-size: 28px;
+    }
+  }
+</style>

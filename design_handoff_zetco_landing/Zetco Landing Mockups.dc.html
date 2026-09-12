@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=Archivo:wght@500;700;800&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+body{margin:0;background:#dcdad9;font-family:"Source Serif 4",Georgia,serif;color:#0B0B0B;text-wrap:pretty}
+a{color:#D8262C}a:hover{color:#A81C21}
+</style>
+</helmet>
+
+<section style="padding:48px;display:flex;flex-direction:column;gap:24px">
+<div style="display:flex;align-items:baseline;gap:16px;font-family:Archivo,sans-serif"><span style="font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:#5a5757">Turn 3</span><span style="font-size:15px;color:#5a5757"><a href="#2a">2a</a> — 1B's red header on 1E's body</span></div>
+<div style="display:flex;flex-wrap:wrap;gap:48px;align-items:flex-start">
+<!-- ═══════════ 2a Hybrid: 1B header + 1E body ═══════════ -->
+<div id="2a" style="position:relative;width:1280px;flex:none;background:{{ f.bg }};color:{{ f.ink }};box-shadow:0 12px 32px rgba(45,43,43,.22)">
+<span style="position:absolute;top:-30px;left:0;font-family:Archivo,sans-serif;font-size:12px;font-weight:700;letter-spacing:.1em;color:#0B0B0B;background:#fff;padding:3px 8px;border-radius:2px">2A · RED FIELD + LEDGER</span>
+<div style="background:#D8262C;color:#fff;position:relative;overflow:hidden">
+<nav style="display:flex;align-items:center;gap:36px;padding:22px 72px;position:relative;z-index:1">
+<div style="background:#fff;padding:6px 10px;border-radius:2px;margin-right:auto"><img src="assets/zetco-logo.png" alt="Zetco" style="height:36px;width:auto;display:block"></div>
+<a href="#" style="color:#fff;text-decoration:none;font-size:15px">Services</a>
+<a href="#" style="color:#fff;text-decoration:none;font-size:15px">Projects</a>
+<a href="#" style="color:#fff;text-decoration:none;font-size:15px">Firm</a>
+<a href="#" style="color:#fff;text-decoration:none;font-size:15px">Careers</a>
+<button type="button" onClick="{{ toggleF }}" title="Toggle dark mode" style="display:inline-flex;align-items:center;gap:8px;background:transparent;border:1px solid rgba(255,255,255,.6);color:#fff;font:inherit;font-size:13px;padding:6px 10px;border-radius:999px;cursor:pointer"><span style="width:26px;height:14px;border-radius:999px;background:rgba(255,255,255,.35);position:relative;display:inline-block"><span style="position:absolute;top:2px;left:{{ f.knob }};width:10px;height:10px;border-radius:50%;background:#fff;transition:left .2s"></span></span>{{ f.label }}</button>
+<a href="#" style="background:#0B0B0B;color:#fff;text-decoration:none;font-family:Archivo,sans-serif;font-weight:700;font-size:14px;padding:10px 18px;border-radius:2px">Contact us</a>
+</nav>
+<svg viewBox="0 0 400 300" style="position:absolute;right:-60px;top:40px;width:640px;height:auto;opacity:.18" aria-hidden="true"><polygon points="0,0 160,0 80,120" fill="#fff"/><polygon points="200,0 290,0 90,300 0,300" fill="#fff"/><polygon points="310,0 400,0 200,300 110,300" fill="#fff"/><polygon points="320,180 400,300 240,300" fill="#fff"/></svg>
+<div style="padding:110px 72px 120px;position:relative;z-index:1">
+<h1 style="font-family:Archivo,sans-serif;font-weight:800;font-size:92px;line-height:.98;letter-spacing:-.03em;margin:0;max-width:11ch;text-transform:uppercase">We build the bridge before the bridge.</h1>
+<p style="font-size:20px;line-height:1.6;max-width:52ch;margin:40px 0 0;color:#fff">Infrastructure stalls between the public entity that needs it and the private firm that can build it. Zetco is the team in the middle — planning, permitting, managing and delivering.</p>
+<div style="display:flex;gap:16px;margin-top:40px">
+<a href="#" style="background:#0B0B0B;color:#fff;text-decoration:none;font-family:Archivo,sans-serif;font-weight:700;font-size:15px;padding:14px 24px;border-radius:2px">Contact us</a>
+<a href="#" style="color:#fff;text-decoration:none;font-size:15px;padding:14px 6px;border-bottom:1px solid rgba(255,255,255,.6)">Our approach</a>
+</div>
+</div>
+</div>
+<div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));padding:0 72px;border-bottom:1px solid {{ f.rule }}">
+<div style="padding:40px 24px 40px 0;border-right:1px solid {{ f.rule }}"><div style="font-family:Archivo,sans-serif;font-weight:800;font-size:56px;letter-spacing:-.03em;line-height:1;color:#D8262C">60+</div><div style="font-size:14px;margin-top:10px;color:{{ f.muted }}">Years' experience</div></div>
+<div style="padding:40px 24px;border-right:1px solid {{ f.rule }}"><div style="font-family:Archivo,sans-serif;font-weight:800;font-size:56px;letter-spacing:-.03em;line-height:1">140</div><div style="font-size:14px;margin-top:10px;color:{{ f.muted }}">Projects facilitated</div></div>
+<div style="padding:40px 24px;border-right:1px solid {{ f.rule }}"><div style="font-family:Archivo,sans-serif;font-weight:800;font-size:56px;letter-spacing:-.03em;line-height:1">38</div><div style="font-size:14px;margin-top:10px;color:{{ f.muted }}">Public entities served</div></div>
+<div style="padding:40px 0 40px 24px"><div style="font-family:Archivo,sans-serif;font-weight:800;font-size:56px;letter-spacing:-.03em;line-height:1">1996</div><div style="font-size:14px;margin-top:10px;color:{{ f.muted }}">Founded in Cali</div></div>
+</div>
+<div style="padding:84px 72px 0">
+<span style="display:block;font-family:Archivo,sans-serif;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:#D8262C;margin-bottom:8px">Services</span>
+<div style="display:grid;grid-template-columns:120px minmax(0,1fr);gap:32px;padding:36px 0;border-bottom:1px solid {{ f.rule }};align-items:start"><span style="font-family:Archivo,sans-serif;font-weight:800;font-size:40px;letter-spacing:-.03em;color:#D8262C;line-height:1">01</span><div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px"><h2 style="font-family:Archivo,sans-serif;font-weight:700;font-size:34px;letter-spacing:-.02em;margin:0;line-height:1.1">Project &amp; program management</h2><p style="font-size:16px;line-height:1.7;margin:0;color:{{ f.sub }}">Schedule, cost, contracts and quality under one accountable team — from scope to close-out. One plan, one truth, reported the way the owner needs to read it.</p></div></div>
+<div style="display:grid;grid-template-columns:120px minmax(0,1fr);gap:32px;padding:36px 0;border-bottom:1px solid {{ f.rule }};align-items:start"><span style="font-family:Archivo,sans-serif;font-weight:800;font-size:40px;letter-spacing:-.03em;color:#D8262C;line-height:1">02</span><div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px"><h2 style="font-family:Archivo,sans-serif;font-weight:700;font-size:34px;letter-spacing:-.02em;margin:0;line-height:1.1">Feasibility &amp; planning</h2><p style="font-size:16px;line-height:1.7;margin:0;color:{{ f.sub }}">Technical, financial and institutional feasibility, structured so a public entity and a private partner can each commit to the same document.</p></div></div>
+<div style="display:grid;grid-template-columns:120px minmax(0,1fr);gap:32px;padding:36px 0;border-bottom:1px solid {{ f.rule }};align-items:start"><span style="font-family:Archivo,sans-serif;font-weight:800;font-size:40px;letter-spacing:-.03em;color:#D8262C;line-height:1">03</span><div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px"><h2 style="font-family:Archivo,sans-serif;font-weight:700;font-size:34px;letter-spacing:-.02em;margin:0;line-height:1.1">Public–private facilitation</h2><p style="font-size:16px;line-height:1.7;margin:0;color:{{ f.sub }}">Thirty years of trust on both sides of the table, put to work aligning institutions, contractors and lenders around one schedulf.</p></div></div>
+</div>
+<div style="padding:84px 72px 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px">
+<div style="position:relative;aspect-ratio:16/10;background:#2d2b2b"><image-slot id="p2a-cali" shape="rect" placeholder="Cali–Jamundí corridor works" style="position:absolute;inset:0;width:100%;height:100%;filter:grayscale(1) contrast(1.2)"></image-slot></div>
+<div style="position:relative;aspect-ratio:16/10;background:#D8262C;color:#fff;padding:40px;display:flex;flex-direction:column;justify-content:space-between"><span style="font-family:Archivo,sans-serif;font-size:13px;letter-spacing:.12em;text-transform:uppercase">Active project</span><div><h3 style="font-family:Archivo,sans-serif;font-weight:800;font-size:40px;letter-spacing:-.03em;line-height:1;margin:0">Vía Cali–Jamundí corridor widening</h3><p style="font-size:16px;line-height:1.6;margin:16px 0 0;max-width:40ch">Program management for a 14 km urban corridor: three municipalities, two concessionaires, one schedule held.</p><a href="#" style="display:inline-block;margin-top:20px;color:#fff;font-family:Archivo,sans-serif;font-weight:700;font-size:14px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border-bottom:2px solid #fff;padding-bottom:4px">All projects</a></div></div>
+</div>
+<div style="padding:84px 72px 0;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:72px;align-items:center"><span style="font-family:Archivo,sans-serif;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:#D8262C">Clients &amp; partners</span><div style="display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:20px"><div style="height:44px;background:{{ f.tile }}"></div><div style="height:44px;background:{{ f.tile }}"></div><div style="height:44px;background:{{ f.tile }}"></div><div style="height:44px;background:{{ f.tile }}"></div><div style="height:44px;background:{{ f.tile }}"></div></div></div>
+<div style="background:#D8262C;color:#fff;margin-top:84px;padding:72px 72px;display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:72px;align-items:end">
+<h3 style="font-family:Archivo,sans-serif;font-weight:800;font-size:64px;letter-spacing:-.04em;line-height:.98;margin:0">Have a project that needs to move?</h3>
+<div style="display:flex;flex-direction:column;gap:12px;font-size:15px"><a href="#" style="background:#0B0B0B;color:#fff;text-decoration:none;font-family:Archivo,sans-serif;font-weight:700;font-size:15px;padding:14px 24px;border-radius:2px;text-align:center">Contact us</a><span>contacto@zetco.com.co · Cali, Colombia</span></div>
+</div>
+<footer style="padding:24px 72px 36px;font-size:13px;color:{{ f.muted }};display:flex;justify-content:space-between"><span>© Zetco S.A.S.</span><span>Since 1996</span></footer>
+</div>
+</div>
+</section>
+
+<section style="padding:48px;display:flex;flex-direction:column;gap:24px">
+<div style="display:flex;align-items:baseline;gap:16px;font-family:Archivo,sans-serif"><span style="font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:#5a5757">Turn 2</span><span style="font-size:15px;color:#5a5757"><a href="#1b">1b</a> Red field · <a href="#1e">1e</a> Ledger (revised) — each has a light/dark toggle in its nav</span></div>
+<div style="display:flex;flex-wrap:wrap;gap:48px;align-items:flex-start">
+
+<!-- ═══════════ 1b Red field ═══════════ -->
+<div id="1b" style="position:relative;width:1280px;flex:none;background:{{ b.bg }};color:{{ b.ink }};box-shadow:0 12px 32px rgba(45,43,43,.22)">
+<span style="position:absolute;top:-30px;left:0;font-family:Archivo,sans-serif;font-size:12px;font-weight:700;letter-spacing:.1em;color:#0B0B0B;background:#fff;padding:3px 8px;border-radius:2px">1B · RED FIELD</span>
+<div style="background:#D8262C;color:#fff;position:relative;overflow:hidden">
+<nav style="display:flex;align-items:center;gap:36px;padding:22px 72px;position:relative;z-index:1">
+<div style="background:#fff;padding:6px 10px;border-radius:2px;margin-right:auto"><img src="assets/zetco-logo.png" alt="Zetco" style="height:36px;width:auto;display:block"></div>
+<a href="#" style="color:#fff;text-decoration:none;font-size:15px">Services</a>
+<a href="#" style="color:#fff;text-decoration:none;font-size:15px">Projects</a>
+<a href="#" style="color:#fff;text-decoration:none;font-size:15px">Firm</a>
+<a href="#" style="color:#fff;text-decoration:none;font-size:15px">Careers</a>
+<button type="button" onClick="{{ toggleB }}" title="Toggle dark mode" style="display:inline-flex;align-items:center;gap:8px;background:transparent;border:1px solid rgba(255,255,255,.6);color:#fff;font:inherit;font-size:13px;padding:6px 10px;border-radius:999px;cursor:pointer"><span style="width:26px;height:14px;border-radius:999px;background:rgba(255,255,255,.35);position:relative;display:inline-block"><span style="position:absolute;top:2px;left:{{ b.knob }};width:10px;height:10px;border-radius:50%;background:#fff;transition:left .2s"></span></span>{{ b.label }}</button>
+<a href="#" style="background:#0B0B0B;color:#fff;text-decoration:none;font-family:Archivo,sans-serif;font-weight:700;font-size:14px;padding:10px 18px;border-radius:2px">Contact us</a>
+</nav>
+<svg viewBox="0 0 400 300" style="position:absolute;right:-60px;top:40px;width:640px;height:auto;opacity:.18" aria-hidden="true"><polygon points="0,0 160,0 80,120" fill="#fff"/><polygon points="200,0 290,0 90,300 0,300" fill="#fff"/><polygon points="310,0 400,0 200,300 110,300" fill="#fff"/><polygon points="320,180 400,300 240,300" fill="#fff"/></svg>
+<div style="padding:110px 72px 120px;position:relative;z-index:1">
+<h1 style="font-family:Archivo,sans-serif;font-weight:800;font-size:92px;line-height:.98;letter-spacing:-.03em;margin:0;max-width:11ch;text-transform:uppercase">We build the bridge before the bridge.</h1>
+<p style="font-size:20px;line-height:1.6;max-width:52ch;margin:40px 0 0;color:#fff">Infrastructure stalls between the public entity that needs it and the private firm that can build it. Zetco is the team in the middle — planning, permitting, managing and delivering.</p>
+<div style="display:flex;gap:16px;margin-top:40px">
+<a href="#" style="background:#0B0B0B;color:#fff;text-decoration:none;font-family:Archivo,sans-serif;font-weight:700;font-size:15px;padding:14px 24px;border-radius:2px">Contact us</a>
+<a href="#" style="color:#fff;text-decoration:none;font-size:15px;padding:14px 6px;border-bottom:1px solid rgba(255,255,255,.6)">Our approach</a>
+</div>
+</div>
+</div>
+<div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:48px;padding:64px 72px">
+<div><div style="font-family:Archivo,sans-serif;font-weight:800;font-size:64px;letter-spacing:-.03em;line-height:1">1996</div><div style="font-size:15px;color:{{ b.muted }};margin-top:8px">Founded in Cali, Colombia</div></div>
+<div><div style="font-family:Archivo,sans-serif;font-weight:800;font-size:64px;letter-spacing:-.03em;line-height:1">60<span style="color:#D8262C">+</span></div><div style="font-size:15px;color:{{ b.muted }};margin-top:8px">Years of family experience in public works</div></div>
+<div><div style="font-family:Archivo,sans-serif;font-weight:800;font-size:64px;letter-spacing:-.03em;line-height:1">140</div><div style="font-size:15px;color:{{ b.muted }};margin-top:8px">Infrastructure projects facilitated</div></div>
+</div>
+<div style="background:{{ b.band }};color:{{ b.bandInk }};padding:84px 72px">
+<span style="display:block;font-family:Archivo,sans-serif;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:#D8262C;margin-bottom:28px">Services</span>
+<div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:56px">
+<div style="border-top:2px solid #D8262C;padding-top:24px"><h2 style="font-family:Archivo,sans-serif;font-weight:700;font-size:30px;margin:0 0 16px;letter-spacing:-.02em">Project &amp; program management</h2><p style="font-size:16px;line-height:1.7;margin:0;color:{{ b.bandSub }}">Schedule, cost, contracts and quality under one accountable team — from scope through close-out.</p></div>
+<div style="border-top:2px solid #D8262C;padding-top:24px"><h2 style="font-family:Archivo,sans-serif;font-weight:700;font-size:30px;margin:0 0 16px;letter-spacing:-.02em">Feasibility &amp; planning</h2><p style="font-size:16px;line-height:1.7;margin:0;color:{{ b.bandSub }}">Technical, financial and institutional studies that let public and private partners say yes to the same plan.</p></div>
+</div>
+</div>
+<div style="padding:84px 72px;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:64px;align-items:center">
+<div><span style="display:block;font-family:Archivo,sans-serif;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:#D8262C;margin-bottom:24px">Active project</span><h2 style="font-family:Archivo,sans-serif;font-weight:800;font-size:40px;letter-spacing:-.03em;line-height:1;margin:0">Vía Cali–Jamundí corridor widening</h2><p style="font-size:17px;line-height:1.7;color:{{ b.sub }};margin:20px 0 0;max-width:44ch">Program management for a 14 km urban corridor: three municipalities, two concessionaires, one schedule held.</p><a href="#" style="display:inline-block;margin-top:22px;font-size:15px">All projects →</a></div>
+<image-slot id="p1b-cali" shape="rect" placeholder="Cali–Jamundí corridor — works photograph" style="display:block;width:100%;aspect-ratio:3/2;filter:grayscale(1) contrast(1.2)"></image-slot>
+</div>
+<div style="padding:0 72px 84px"><div style="display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:24px;align-items:center"><div style="height:44px;background:{{ b.tile }}"></div><div style="height:44px;background:{{ b.tile }}"></div><div style="height:44px;background:{{ b.tile }}"></div><div style="height:44px;background:{{ b.tile }}"></div><div style="height:44px;background:{{ b.tile }}"></div><div style="height:44px;background:{{ b.tile }}"></div></div></div>
+<div style="background:#D8262C;color:#fff;padding:84px 72px;display:flex;justify-content:space-between;align-items:center;gap:48px">
+<h3 style="font-family:Archivo,sans-serif;font-weight:800;font-size:44px;line-height:1.05;letter-spacing:-.03em;margin:0;max-width:16ch;text-transform:uppercase">Let's get your project moving.</h3>
+<a href="#" style="background:#0B0B0B;color:#fff;text-decoration:none;font-family:Archivo,sans-serif;font-weight:700;font-size:16px;padding:16px 28px;border-radius:2px;flex:none">Contact us</a>
+</div>
+<footer style="padding:24px 72px 36px;font-size:13px;color:{{ b.muted }};display:flex;justify-content:space-between"><span>© Zetco S.A.S. — Cali, Colombia</span><span>Since 1996</span></footer>
+</div>
+
+<!-- ═══════════ 1e Ledger (revised: more red, logo-led) ═══════════ -->
+<div id="1e" style="position:relative;width:1280px;flex:none;background:{{ e.bg }};color:{{ e.ink }};box-shadow:0 12px 32px rgba(45,43,43,.22)">
+<span style="position:absolute;top:-30px;left:0;font-family:Archivo,sans-serif;font-size:12px;font-weight:700;letter-spacing:.1em;color:#0B0B0B;background:#fff;padding:3px 8px;border-radius:2px">1E · LEDGER</span>
+<nav style="display:flex;align-items:center;gap:36px;padding:22px 0;border-bottom:2px solid #D8262C;margin:0 72px">
+<div style="background:{{ e.plate }};padding:4px 8px;border-radius:2px;margin-right:auto"><img src="assets/zetco-logo.png" alt="Zetco" style="height:40px;width:auto;display:block;mix-blend-mode:{{ e.blend }}"></div>
+<a href="#" style="color:{{ e.ink }};text-decoration:none;font-family:Archivo,sans-serif;font-size:13px;letter-spacing:.1em;text-transform:uppercase">Services</a><a href="#" style="color:{{ e.ink }};text-decoration:none;font-family:Archivo,sans-serif;font-size:13px;letter-spacing:.1em;text-transform:uppercase">Projects</a><a href="#" style="color:{{ e.ink }};text-decoration:none;font-family:Archivo,sans-serif;font-size:13px;letter-spacing:.1em;text-transform:uppercase">Firm</a><a href="#" style="color:{{ e.ink }};text-decoration:none;font-family:Archivo,sans-serif;font-size:13px;letter-spacing:.1em;text-transform:uppercase">Careers</a>
+<button type="button" onClick="{{ toggleE }}" title="Toggle dark mode" style="display:inline-flex;align-items:center;gap:8px;background:transparent;border:1px solid {{ e.rule }};color:{{ e.ink }};font-family:Archivo,sans-serif;font-size:12px;letter-spacing:.08em;text-transform:uppercase;padding:6px 10px;border-radius:999px;cursor:pointer"><span style="width:26px;height:14px;border-radius:999px;background:{{ e.tile }};position:relative;display:inline-block"><span style="position:absolute;top:2px;left:{{ e.knob }};width:10px;height:10px;border-radius:50%;background:#D8262C;transition:left .2s"></span></span>{{ e.label }}</button>
+<a href="#" style="background:#D8262C;color:#fff;text-decoration:none;font-family:Archivo,sans-serif;font-weight:700;font-size:13px;letter-spacing:.1em;text-transform:uppercase;padding:10px 18px;border-radius:2px">Contact us</a>
+</nav>
+<div style="position:relative;overflow:hidden;padding:80px 72px 72px;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:64px;align-items:center">
+<svg viewBox="0 0 400 300" style="position:absolute;right:-60px;top:20px;width:640px;height:auto;opacity:.12;pointer-events:none" aria-hidden="true"><polygon points="0,0 160,0 80,120" fill="#D8262C"/><polygon points="200,0 290,0 90,300 0,300" fill="#D8262C"/><polygon points="310,0 400,0 200,300 110,300" fill="#D8262C"/><polygon points="320,180 400,300 240,300" fill="#D8262C"/></svg>
+<div style="position:relative;background:{{ e.plate }};padding:{{ e.platePad }};border-radius:4px;justify-self:start"><img src="assets/zetco-logo.png" alt="Zetco" style="width:100%;max-width:420px;height:auto;display:block;mix-blend-mode:{{ e.blend }}"></div>
+<div style="position:relative"><h1 style="font-family:Archivo,sans-serif;font-weight:800;font-size:96px;line-height:.95;letter-spacing:-.04em;margin:0">Infrastructure, <span style="color:#D8262C">delivered.</span></h1><p style="font-size:18px;line-height:1.65;margin:32px 0 0;color:{{ e.sub }};max-width:46ch">Project management and feasibility for public works. Cali, Colombia — a family firm since 1996, on sixty years of experience.</p><div style="display:flex;gap:16px;margin-top:32px"><a href="#" style="background:#D8262C;color:#fff;text-decoration:none;font-family:Archivo,sans-serif;font-weight:700;font-size:15px;padding:14px 24px;border-radius:2px">Contact us</a><a href="#" style="color:{{ e.ink }};text-decoration:none;font-family:Archivo,sans-serif;font-weight:700;font-size:13px;letter-spacing:.1em;text-transform:uppercase;padding:14px 6px;border-bottom:2px solid #D8262C">Our projects</a></div></div>
+</div>
+<div style="background:#D8262C;color:#fff;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));padding:0 72px">
+<div style="padding:40px 24px 40px 0;border-right:1px solid rgba(255,255,255,.4)"><div style="font-family:Archivo,sans-serif;font-weight:800;font-size:56px;letter-spacing:-.03em;line-height:1">60+</div><div style="font-size:14px;margin-top:10px;color:#fff">Years' experience</div></div>
+<div style="padding:40px 24px;border-right:1px solid rgba(255,255,255,.4)"><div style="font-family:Archivo,sans-serif;font-weight:800;font-size:56px;letter-spacing:-.03em;line-height:1">140</div><div style="font-size:14px;margin-top:10px">Projects facilitated</div></div>
+<div style="padding:40px 24px;border-right:1px solid rgba(255,255,255,.4)"><div style="font-family:Archivo,sans-serif;font-weight:800;font-size:56px;letter-spacing:-.03em;line-height:1">38</div><div style="font-size:14px;margin-top:10px">Public entities served</div></div>
+<div style="padding:40px 0 40px 24px"><div style="font-family:Archivo,sans-serif;font-weight:800;font-size:56px;letter-spacing:-.03em;line-height:1">1996</div><div style="font-size:14px;margin-top:10px">Founded in Cali</div></div>
+</div>
+<div style="padding:84px 72px 0">
+<span style="display:block;font-family:Archivo,sans-serif;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:#D8262C;margin-bottom:8px">Services</span>
+<div style="display:grid;grid-template-columns:120px minmax(0,1fr);gap:32px;padding:36px 0;border-bottom:1px solid {{ e.rule }};align-items:start"><span style="font-family:Archivo,sans-serif;font-weight:800;font-size:40px;letter-spacing:-.03em;color:#D8262C;line-height:1">01</span><div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px"><h2 style="font-family:Archivo,sans-serif;font-weight:700;font-size:34px;letter-spacing:-.02em;margin:0;line-height:1.1">Project &amp; program management</h2><p style="font-size:16px;line-height:1.7;margin:0;color:{{ e.sub }}">Schedule, cost, contracts and quality under one accountable team — from scope to close-out. One plan, one truth, reported the way the owner needs to read it.</p></div></div>
+<div style="display:grid;grid-template-columns:120px minmax(0,1fr);gap:32px;padding:36px 0;border-bottom:1px solid {{ e.rule }};align-items:start"><span style="font-family:Archivo,sans-serif;font-weight:800;font-size:40px;letter-spacing:-.03em;color:#D8262C;line-height:1">02</span><div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px"><h2 style="font-family:Archivo,sans-serif;font-weight:700;font-size:34px;letter-spacing:-.02em;margin:0;line-height:1.1">Feasibility &amp; planning</h2><p style="font-size:16px;line-height:1.7;margin:0;color:{{ e.sub }}">Technical, financial and institutional feasibility, structured so a public entity and a private partner can each commit to the same document.</p></div></div>
+<div style="display:grid;grid-template-columns:120px minmax(0,1fr);gap:32px;padding:36px 0;border-bottom:1px solid {{ e.rule }};align-items:start"><span style="font-family:Archivo,sans-serif;font-weight:800;font-size:40px;letter-spacing:-.03em;color:#D8262C;line-height:1">03</span><div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px"><h2 style="font-family:Archivo,sans-serif;font-weight:700;font-size:34px;letter-spacing:-.02em;margin:0;line-height:1.1">Public–private facilitation</h2><p style="font-size:16px;line-height:1.7;margin:0;color:{{ e.sub }}">Thirty years of trust on both sides of the table, put to work aligning institutions, contractors and lenders around one schedule.</p></div></div>
+</div>
+<div style="padding:84px 72px 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px">
+<div style="position:relative;aspect-ratio:16/10;background:#2d2b2b"><image-slot id="p1e-cali" shape="rect" placeholder="Cali–Jamundí corridor works" style="position:absolute;inset:0;width:100%;height:100%;filter:grayscale(1) contrast(1.2)"></image-slot></div>
+<div style="position:relative;aspect-ratio:16/10;background:#D8262C;color:#fff;padding:40px;display:flex;flex-direction:column;justify-content:space-between"><span style="font-family:Archivo,sans-serif;font-size:13px;letter-spacing:.12em;text-transform:uppercase">Active project</span><div><h3 style="font-family:Archivo,sans-serif;font-weight:800;font-size:40px;letter-spacing:-.03em;line-height:1;margin:0">Vía Cali–Jamundí corridor widening</h3><p style="font-size:16px;line-height:1.6;margin:16px 0 0;max-width:40ch">Program management for a 14 km urban corridor: three municipalities, two concessionaires, one schedule held.</p><a href="#" style="display:inline-block;margin-top:20px;color:#fff;font-family:Archivo,sans-serif;font-weight:700;font-size:14px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border-bottom:2px solid #fff;padding-bottom:4px">All projects</a></div></div>
+</div>
+<div style="padding:84px 72px 0;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:72px;align-items:center"><span style="font-family:Archivo,sans-serif;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:#D8262C">Clients &amp; partners</span><div style="display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:20px"><div style="height:44px;background:{{ e.tile }}"></div><div style="height:44px;background:{{ e.tile }}"></div><div style="height:44px;background:{{ e.tile }}"></div><div style="height:44px;background:{{ e.tile }}"></div><div style="height:44px;background:{{ e.tile }}"></div></div></div>
+<div style="background:#D8262C;color:#fff;margin-top:84px;padding:72px 72px;display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:72px;align-items:end">
+<h3 style="font-family:Archivo,sans-serif;font-weight:800;font-size:64px;letter-spacing:-.04em;line-height:.98;margin:0">Have a project that needs to move?</h3>
+<div style="display:flex;flex-direction:column;gap:12px;font-size:15px"><a href="#" style="background:#0B0B0B;color:#fff;text-decoration:none;font-family:Archivo,sans-serif;font-weight:700;font-size:15px;padding:14px 24px;border-radius:2px;text-align:center">Contact us</a><span>contacto@zetco.com.co · Cali, Colombia</span></div>
+</div>
+<footer style="padding:24px 72px 36px;font-size:13px;color:{{ e.muted }};display:flex;justify-content:space-between"><span>© Zetco S.A.S.</span><span>Since 1996</span></footer>
+</div>
+
+</div>
+</section>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;startDark&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Theme&quot;}}">
+class Component extends DCLogic {
+  state = { b: false, c: false, e: false, f: false };
+  componentDidMount() {
+    const d = !!(this.props.startDark ?? false);
+    if (d) this.setState({ b: true, c: true, e: true, f: true });
+  }
+  theme(dark) {
+    return dark ? {
+      bg: '#0F0E0E', ink: '#F3F2F2', sub: '#CFCBCB', muted: '#9B9797', tile: '#262424', rule: '#4a4646',
+      band: '#1C1A1A', bandInk: '#F3F2F2', bandSub: '#CFCBCB', plate: '#FFFFFF', platePad: '28px', blend: 'normal',
+      knob: '14px', label: 'Dark'
+    } : {
+      bg: '#F3F2F2', ink: '#0B0B0B', sub: '#3a3737', muted: '#4a4747', tile: '#e4e2e1', rule: '#0B0B0B',
+      band: '#0B0B0B', bandInk: '#F3F2F2', bandSub: '#c9c6c6', plate: 'transparent', platePad: '0', blend: 'multiply',
+      knob: '2px', label: 'Light'
+    };
+  }
+  renderVals() {
+    const t = k => () => this.setState(s => ({ [k]: !s[k] }));
+    return {
+      b: this.theme(this.state.b), c: this.theme(this.state.c), e: this.theme(this.state.e), f: this.theme(this.state.f),
+      toggleB: t('b'), toggleC: t('c'), toggleE: t('e'), toggleF: t('f')
+    };
+  }
+}
+</script>
+</body>
+</html>
